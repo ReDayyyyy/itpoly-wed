@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/itpoly-wed/static/css/main.fa87ac1a.css",
+    "main.js": "/itpoly-wed/static/js/main.a687ac88.js",
+    "static/js/488.0227f3f0.chunk.js": "/itpoly-wed/static/js/488.0227f3f0.chunk.js",
+    "static/media/3.jpg": "/itpoly-wed/static/media/3.0b72ad2ea0db3258935f.jpg",
+    "static/media/2.jpg": "/itpoly-wed/static/media/2.c890e1590041c888b69a.jpg",
+    "static/media/1.jpg": "/itpoly-wed/static/media/1.b43598c383c0e136d7eb.jpg",
+    "static/media/slick.svg": "/itpoly-wed/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/itpoly-wed/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/itpoly-wed/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/itpoly-wed/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/itpoly-wed/index.html",
+    "main.fa87ac1a.css.map": "/itpoly-wed/static/css/main.fa87ac1a.css.map",
+    "main.a687ac88.js.map": "/itpoly-wed/static/js/main.a687ac88.js.map",
+    "488.0227f3f0.chunk.js.map": "/itpoly-wed/static/js/488.0227f3f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa87ac1a.css",
+    "static/js/main.a687ac88.js"
+  ]
+}
