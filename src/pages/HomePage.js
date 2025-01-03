@@ -1,7 +1,12 @@
 import React from 'react';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css'; 
+import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+// ตัวอย่างภาพกิจกรรม (คุณสามารถแทนที่ด้วย URL ของภาพของคุณ)
+import EventImage1 from '../images/1.jpg';
+import EventImage2 from '../images/2.jpg';
+import EventImage3 from '../images/3.jpg';
 
 function HomePage() {
   const settings = {
@@ -16,40 +21,113 @@ function HomePage() {
 
   const imageStyle = {
     width: '100%',
-    height: '400px', // กำหนดความสูงให้เท่ากันทุกสไลด์
-    objectFit: 'cover', // เพื่อปรับให้รูปพอดีกับกรอบ
+    height: '400px',
+    objectFit: 'cover',
     borderRadius: '10px',
   };
 
   return (
-    <section id="home">
-      <h2>ยินดีต้อนรับเข้าสู่เว็บของเรา</h2>
-      <p>เทคโนโลยีสารสนเทศ</p>
+    <section id="home" style={styles.section}>
+      <h2 style={styles.heading} data-aos="fade-up">ยินดีต้อนรับเข้าสู่เว็บของเรา</h2>
+      <p style={styles.subHeading} data-aos="fade-up" data-aos-delay="200">เทคโนโลยีสารสนเทศ</p>
+
+      {/* Slider สำหรับกิจกรรม */}
       <Slider {...settings}>
-        <div>
-          <img
-            src="https://scontent.fcnx3-1.fna.fbcdn.net/v/t39.30808-6/458711378_1035385301920895_9045442624310260588_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEfnK8bI9xrAO-ejVcDUUZj189rglxH1n7Xz2uCXEfWfmBm9q-Uo90oM4vRxJEFAqW4q2BZsjbzu7KJYKLw7ZXo&_nc_ohc=OEd8bFm3liUQ7kNvgFnlMdf&_nc_oc=Adhfo36atZC3b0XwK2aXU44aQv54HZLL3npElzP9ILhldYPhxMYxCvtvvDUUsNKmMG8&_nc_zt=23&_nc_ht=scontent.fcnx3-1.fna&_nc_gid=A8foGpmJy7fZNtd9Gfk5LJm&oh=00_AYBXP10b8axNz44jsW8knSMJRcOHjsnKALzIDTHfgqAvsg&oe=6773D423"
-            alt="Slide 1"
-            style={imageStyle}
-          />
+        <div data-aos="fade-in">
+          <img src={EventImage1} alt="กิจกรรม 1" style={imageStyle} />
         </div>
-        <div>
-          <img
-            src="https://scontent.fcnx3-1.fna.fbcdn.net/v/t39.30808-6/459239445_1038987911560634_7282358072979799197_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEu8kjAM7xfzK_GFoGXMKf8KGo_fPK0M1koaj988rQzWap6zaQI8LIg5X5iKWB4Qwb_IM1faDiJEBlewluouY7b&_nc_ohc=ixGd1Mn51T0Q7kNvgFvboiy&_nc_oc=Adj-pZCYankV44pdb0U3UAnWPyBAkDN9utX5k-hgcCkR7aIPxMGuYEKbsiqgme3SjO4&_nc_zt=23&_nc_ht=scontent.fcnx3-1.fna&_nc_gid=Azlqcrh7SUDc5sSeXXJcSLx&oh=00_AYAn_6rCFiPzuCd8nYdP7lb2ocPY9gbc3aHxFMlrX3jKtw&oe=6773F3C8"
-            alt="Slide 2"
-            style={imageStyle}
-          />
+        <div data-aos="fade-in">
+          <img src={EventImage2} alt="กิจกรรม 2" style={imageStyle} />
         </div>
-        <div>
-          <img
-            src="https://scontent.fcnx1-1.fna.fbcdn.net/v/t39.30808-6/465985343_1089521756507249_4254757350376348131_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEawlFQKAjqoeNYG95gfPwWiJurgJ5iJjaIm6uAnmImNrYyzo5y3E2oaF4I3WBvx-JlHvuCPJan44UrRQeirZyj&_nc_ohc=g5z8bfjwShEQ7kNvgHt8yN9&_nc_oc=AdjFCKZ2ELkwwFiqZtUCcNGaamWlnB7o6hdOmAxzXzuf1QgM-WTyS3raKQeuoMeabhk&_nc_zt=23&_nc_ht=scontent.fcnx1-1.fna&_nc_gid=A-Ox93OPBeFp0XyyAcWulcC&oh=00_AYBzI-1ehiUb-9Rh7c8UOTNEWbslYww3wDTJZJZxH4LyOw&oe=6773EDD4"
-            alt="Slide 3"
-            style={imageStyle}
-          />
+        <div data-aos="fade-in">
+          <img src={EventImage3} alt="กิจกรรม 3" style={imageStyle} />
         </div>
       </Slider>
+
+      {/* กิจกรรมที่สำคัญ */}
+      <section style={styles.activitiesSection}>
+        <h3 style={styles.activitiesHeading}>กิจกรรมของเรา</h3>
+        <div style={styles.activitiesContainer}>
+          {/* กิจกรรมที่ 1 */}
+          <div style={styles.activityCard} data-aos="fade-up">
+            <img src={EventImage1} alt="กิจกรรม 1" style={styles.activityImage} />
+            <p style={styles.activityDescription}>ทักษะการเขียนโปรแกรมคอมพิวเตอร์ ระดับ ปวช. ได้รับรางวัลชนะเลิศเหรียญทอง และได้เป็นตัวแทนไปแข่งขันต่อในระดับภาคเหนือ</p>
+          </div>
+
+          {/* กิจกรรมที่ 2 */}
+          <div style={styles.activityCard} data-aos="fade-up" data-aos-delay="200">
+            <img src={EventImage2} alt="กิจกรรม 2" style={styles.activityImage} />
+            <p style={styles.activityDescription}>กิจกรรมPOLY Folksong Contest</p>
+          </div>
+
+          {/* กิจกรรมที่ 3 */}
+          <div style={styles.activityCard} data-aos="fade-up" data-aos-delay="400">
+            <img src={EventImage3} alt="กิจกรรม 3" style={styles.activityImage} />
+            <p style={styles.activityDescription}>กีฬาสานสัมพันธ์ สาขาเทคโนโลยีสารสนเทศ ปีการศึกษา 2567</p>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }
+
+const styles = {
+  section: {
+    padding: '40px 20px',
+    textAlign: 'center',
+    backgroundColor: '#f8f8f8',
+  },
+  heading: {
+    fontSize: '2.5em',
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  subHeading: {
+    fontSize: '1.2em',
+    color: '#555',
+    marginBottom: '30px',
+  },
+  activitiesSection: {
+    marginTop: '50px',
+    padding: '40px 20px',
+    backgroundColor: '#ffffff',
+    borderRadius: '10px',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+  },
+  activitiesHeading: {
+    fontSize: '2em',
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: '20px',
+  },
+  activitiesContainer: {
+    display: 'flex',
+    gap: '20px',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  },
+  activityCard: {
+    width: '30%',
+    backgroundColor: '#fff',
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    overflow: 'hidden',
+    textAlign: 'center',
+  },
+  activityImage: {
+    width: '100%',
+    height: '200px',
+    objectFit: 'cover',
+    borderBottom: '2px solid #f2f2f2',
+  },
+  activityDescription: {
+    padding: '10px',
+    fontSize: '1.1em',
+    color: '#555',
+    backgroundColor: '#f8f8f8',
+    borderBottomLeftRadius: '10px',
+    borderBottomRightRadius: '10px',
+  },
+};
 
 export default HomePage;
